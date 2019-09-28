@@ -1,0 +1,70 @@
+
+@media screen and (max-width: 768px) {
+  #container {padding-top: 5px;
+              padding-bottom: 50px;}
+  .button-form{
+   width: 100%;
+  }
+  form{
+    width:90%;
+  }
+
+}
+@media screen and (min-width: 768px) {
+  #container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+   }
+   .button-form{
+    width: 50%;
+   }
+   .container{
+    width:70%;
+  }
+}
+form{
+  margin: auto;
+  width: 100%;
+}
+h4{
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: 25px;
+}
+.controller{
+  font-size: 12px;
+  line-height: 40px;
+  width: 100%;
+  border:solid rgba(175, 171, 166, 0.979) 0.05px;
+}
+
+.button-form{
+  padding:10px 20px;
+  text-align: center;
+  background-color: black;
+  color:white;
+  font-size: 13px;
+}
+.button-form:hover{
+  background-color: grey;
+  color:black;
+}
+label{
+  font-weight: bold;
+}
+::placeholder{
+  text-indent:10px;
+}
+
+input{
+  text-indent: 10px;
+}
+.my-invalid, .my-invalidpattern{
+  border: rgb(248, 115, 115) 0.05px solid;
+}
+flash-messages{
+  position: relative;
+}
+mat-error{
+ font-size: 15px;
+}

@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstname": "duy",
+      "lastname": "json-server",
+      "username": "typicode",
+      "password": "dadwa",
+      "email": "12121@yahoo.com",
+      "address": "1212 faf",
+      "phone": 1212121
+    },
+    {
+      "user": {
+        "id": "1",
+        "lastname": "Truong",
+        "firstname": "Duy",
+        "username": "123",
+        "password": "12321",
+        "address": "3018 gladiola Ct",
+        "email": "nhatduy1691995@yahoo.com",
+        "phone": "2142355014"
+      },
+      "id": 2
+    },
+    {
+      "user": {
+        "lastname": "nguyen",
+        "firstname": "hung",
+        "username": "edsadsa",
+        "password": "we1212",
+        "address": "1212 dsds",
+        "email": "nhatduy1691995@yahoo.com",
+        "phone": "2142355014"
+      },
+      "id": 3
+    },
+    {
+      "user": {
+        "lastname": "Truong",
+        "firstname": "Duy",
+        "username": "1ewqe",
+        "password": "qw",
+        "address": "3018 gladiola Ct",
+        "email": "nhatduy1691995@yahoo.com",
+        "phone": "2142355014"
+      },
+      "id": 4
+    }
+  ]
+}

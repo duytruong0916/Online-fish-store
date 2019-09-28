@@ -1,0 +1,98 @@
+<!---footer-information-->
+<div class="container-fluid">
+  <div class="first-row row">
+    <div class="first-col col-sm-12 col-md-3 mt-2">
+      <div class= "ml-2">
+        <div><a href="#" class="footer-title">GIFT CARDS</a></div>
+        <div><a href="#" class="footer-title">STUDENT DISCOUNT</a></div>
+        <div><a href="#" class="footer-title"> MILITARY DISCOUNT</a></div>
+        <div><a href="#" class="footer-title"> FIND A STORE</a></div>
+        <div><a href="#" class="footer-title">SIGN UP FOR EMAIL</a></div>
+        <div><a href="#" class="footer-title"> BECOME A MEMBER</a></div>
+        <div><a href="#" class="footer-title"> SITE FEEDBACK</a></div>
+      </div>
+    </div>
+    <div class="second-col col-sm-12 col-md-3 ">
+      <div class="d-none d-md-block">
+          <div class="footer-title mt-lg-4">UTILITIES</div>
+          <div>
+            <div><a href="#">Order Status</a></div>
+            <div> <a href="#">Shipping and Delivery</a></div>
+            <div> <a href="#">Returns</a></div>
+            <div> <a href="#">Payment Options</a></div>
+          </div>
+     </div>
+      <mat-accordion multi="false">
+          <mat-expansion-panel class="d-block d-md-none" MatExpansionPanelState='expanded' hideToggle="true" #example>
+            <mat-expansion-panel-header class="specific-class w-100">
+              <span class="mr-auto">UTILITIES</span>
+              <mat-icon *ngIf="!example.expanded">add</mat-icon>
+              <mat-icon *ngIf="example.expanded">arrow_drop_down</mat-icon>
+            </mat-expansion-panel-header>
+            <div>
+              <div><a href="#">Order Status</a></div>
+              <div> <a href="#">Shipping and Delivery</a></div>
+              <div> <a href="#">Returns</a></div>
+              <div> <a href="#">Payment Options</a></div>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <div class="third-col col-sm-12 col-md-3">
+        <div class="footer-title mt-lg-4">SIGN UP & SAVE</div>
+          <div>
+            <div><a href="#">Subscribe to get special offers.</a></div>
+          </div>
+    </div>
+    <div class="forth-col col-sm-12 col-md-3">
+        <div class="d-flex flex-md-row-reverse flex-row mt-sm-2 mt-md-5">
+          <span><a class="fa fa-facebook mr-4" href="#"></a></span>
+          <span><a class="fa fa-twitter mr-4" href="#"></a></span>
+          <span> <a class="fa fa-instagram mr-4" href="#"></a></span>
+          <span> <a class="fa fa-youtube mr-4" href="#"></a></span>
+        </div>
+    </div>
+  </div>
+  <div class="second-row row">
+    <div class=" col-sm-12 col-md-4 text-center order-md-2">
+        <span class="mr-3"><a class="footer-sub" href="#">Terms & Condition</a></span>
+        <span class="mr-3"><a class="footer-sub" href="#">Guides</a></span>
+        <span class="mr-3"><a class="footer-sub"href="#">Privacy Notice</a></span>
+    </div>
+    <div class="col-sm-12 col-md-4 order-md-3 my-auto text-center text-md-right">
+      <div data-toggle="modal" data-target="#myModal" data-backdrop="false">
+        <span class= "mr-1"><img src="assets/images/flags/united-states.png " width=25px></span>
+        <span class= "small">The United States</span>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4 order-md-1  my-auto">
+        <span class= "footer-title">© 2019 AnguBetta US| All Rights Reserved. | Be a costonian.</span>
+    </div>
+ </div>
+</div>
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title">CHOOSE YOUR LOCATION</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+         <div class="form-group">
+            <label for="sel1">SELECT STATE:</label>
+            <select class="form-control" id="sel1">
+              <option  *ngFor ="let state of states">{{state}}</option>
+            </select>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <div class="modal-submit" data-dismiss="modal">submit</div>
+        </div>
+
+      </div>
+    </div>
+  </div>

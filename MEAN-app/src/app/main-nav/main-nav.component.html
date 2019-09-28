@@ -1,0 +1,113 @@
+<mat-sidenav-container
+id="container-0"
+class="sidenav-container"
+hasBackdrop="false">
+  <mat-sidenav #drawer mode="push" class="sidenav d-flex d-md-none" fixedInViewport="true">
+    <!---drawer1-->
+    <mat-sidenav-container id="container-1" class="sidenav-container" hasBackdrop="false">
+      <mat-sidenav #drawer1 mode="push" position="end" class="sidenav d-flex">
+        <!--drawer2-->
+        <mat-sidenav-container id="container-2" class="sidenav-container" hasBackdrop="false">
+          <mat-sidenav #drawer2 mode="push" position="end" class="sidenav d-flex">
+            <mat-toolbar>
+              <span class="ml-3" (click)="drawer2.toggle(); ">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+              </span>
+              <span class="menu-shop">{{menu2}}</span>
+            </mat-toolbar>
+            <mat-divider></mat-divider>
+            <div *ngIf="menu2=='SHOP BY CATEGORY'">
+              <div class="d-flex ml-2 mt-4"><a href="#">DRAGON</a></div>
+              <div class="d-flex ml-2 mt-4"><a href="#">FANCY</a></div>
+              <div class="d-flex ml-2 mt-4"><a href="#">KOI</a></div>
+              <div class="d-flex ml-2 mt-4"><a href="#">SUPER</a></div>
+              <div class="d-flex ml-2 mt-4"><a href="#">AEO</a></div>
+            </div>
+            <div *ngIf="menu2=='SHOP BY SIZE'">
+              <div class="d-flex ml-2  mt-4"><a href="#">BABY</a></div>
+              <div class="d-flex ml-2 mt-4"><a href="#">JUNIOR</a></div>
+              <div class="d-flex ml-2 mt-4"><a href="#">SENIOR</a></div>
+            </div>
+            <div *ngIf="menu2=='SHOP BY GENDER'">
+              <div class="d-flex ml-2 mt-4"><a href="#">MALE</a></div>
+              <div class="d-flex ml-2 mt-4"><a href="#">FEMALE</a></div>
+            </div>
+          </mat-sidenav>
+          <!---drawer2's content-->
+          <mat-sidenav-content>
+            <mat-toolbar class="d-flex">
+              <span class="ml-3" (click)="drawer1.toggle(); ">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+              </span>
+              <span class="menu-shop">{{menu1}}</span>
+            </mat-toolbar>
+            <mat-divider></mat-divider>
+            <div (click)="drawer2.toggle(); menu2= category.id" class="d-flex ml-2 mt-4"  *ngIf="menu1!='FIGHTER'"><span class="mr-auto">SHOP BY
+                CATEGORY</span><span #category id="SHOP BY CATEGORY" class="mr-2">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+              </span></div>
+              <div class="d-flex ml-2 mt-4"><a href="#">ALL FISH</a></div>
+            <div (click)="drawer2.toggle(); menu2= size.id" class="d-flex ml-2 mt-4"><span class="mr-auto">SHOP BY
+                SIZE</span><span #size id="SHOP BY SIZE" class="mr-2">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+              </span></div>
+            <div (click)="drawer2.toggle(); menu2= gender.id" class="d-flex ml-2 mt-4"><span class="mr-auto">SHOP BY
+                GENDER</span><span #gender id="SHOP BY
+                GENDER" class="mr-2">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+              </span></div>
+            <div class="d-flex ml-2 mt-4"><a href="#"> HOT PICKS</a></div>
+            <div class="d-flex ml-2 mt-4"><a href="#">NEW ARRIVALS</a></div>
+            <div class="d-flex ml-2 mt-4"><a href="#">SALES</a></div>
+          </mat-sidenav-content>
+        </mat-sidenav-container>
+      </mat-sidenav>
+      <!--content 0f the drawer1-->
+      <mat-sidenav-content>
+        <mat-toolbar><span class="menu-shop mx-auto">MENU</span></mat-toolbar>
+         <mat-divider></mat-divider>
+        <mat-nav-list>
+          <div (click)="drawer1.toggle();menu1= plakat.id" class="d-flex ml-2 mt-3"><span class="mr-auto">PLAKAT
+            </span><span #plakat id="PLAKAT" class="mr-2">
+              <mat-icon>keyboard_arrow_right</mat-icon>
+            </span></div>
+          <div (click)="drawer1.toggle();menu1=halfmoon.id" class="d-flex ml-2 mt-3"><span class="mr-auto">HALFMOON
+            </span><span #halfmoon id="HALFMOON" class="mr-2">
+              <mat-icon>keyboard_arrow_right</mat-icon>
+            </span></div>
+          <div (click)="drawer1.toggle();menu1=crowntail.id " class="d-flex ml-2 mt-3"><span
+              class="mr-auto">CROWNTAIL</span><span #crowntail id="CROWNTAIL" class="mr-2">
+              <mat-icon>keyboard_arrow_right</mat-icon>
+            </span></div>
+            <div (click)="drawer1.toggle();menu1=fighter.id " class="d-flex ml-2 mt-3"><span
+              class="mr-auto">FIGHTER</span><span #fighter id="FIGHTER" class="mr-2">
+              <mat-icon>keyboard_arrow_right</mat-icon>
+            </span></div>
+          <div class="d-flex ml-2 mt-3"><a href="#">ABOUT US</a></div>
+          <div class="d-flex ml-2 mt-3"><a href="#">HELP</a></div>
+        </mat-nav-list>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </mat-sidenav>
+  <!--content 0f the main sidebar-->
+  <mat-sidenav-content>
+    <mat-toolbar color="white" class="d-block d-md-none sticky-top border" >
+      <span (click)="drawer.toggle()" class="float-left  mt-3">
+        <mat-icon (click)="isToggle =!isToggle" *ngIf="isToggle">clear</mat-icon>
+        <mat-icon (click)="isToggle =!isToggle" *ngIf="!isToggle">menu</mat-icon>
+      </span>
+      <span><a [routerLink]="['/home']" routerLinkActive="router-link-active" ><img src="assets/images/brand.gif" style="width:17%; margin-left: 80px"></a></span>
+      <span class="float-left ml-3 mt-3">
+        <a [routerLink]="['/profile']" routerLinkActive="router-link-active" >
+          <mat-icon>person</mat-icon>
+        </a></span>
+      <span class="float-right ml-3 mt-3"><a>
+          <mat-icon>shopping_cart</mat-icon>
+        </a></span>
+      <span class="float-right ml-3 mt-3"><a>
+          <mat-icon>search</mat-icon>
+        </a></span>
+    </mat-toolbar>
+    <ng-content></ng-content>
+ </mat-sidenav-content>
+</mat-sidenav-container>

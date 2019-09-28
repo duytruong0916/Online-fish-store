@@ -1,0 +1,94 @@
+<!--navbar------>
+<div class="container-fluid bg-white d-none d-md-block fixed-top">
+  <mat-toolbar class="bg-white">
+    <!---first row-->
+    <mat-toolbar-row class="my-auto">
+        <a [routerLink]="['home']" routerLinkActive="router-link-active" class= "mr-auto" >
+      <span class="my-auto d-flex flex-row">
+        <img src="assets/images/brand.gif" class="img-responsive mt-3" style="width:7vw;">
+        <h4 class="shop-name mt-4 d-none d-md-block">AnguBetta</h4>
+      </span>
+       </a>
+      <span class="mt-0 mr-4" *ngIf ="userAuthenticated">
+          <p class="small">Hello {{user_lastname}} !</p>
+      </span>
+      <span class="mt-0 mr-4">
+          <mat-icon style="font-size:1.5em">search</mat-icon>
+      </span>
+      <span class="mt-1 mr-4 d-none d-md-block" *ngIf ="userAuthenticated">
+          <a class="onNav" [routerLink]="['profile']" routerLinkActive="router-link-active" >
+            <mat-icon style="font-size:2.0em">perm_identity</mat-icon>
+          </a>
+        </span>
+      <span class=" mt-1  mr-4">
+        <a href="#" class="onNav">
+          <mat-icon style="font-size:1.6em">shopping_cart</mat-icon>
+        </a>
+      </span>
+      <span class="mt-0 mr-4 d-none d-md-block" *ngIf ="!userAuthenticated">
+        <a class="small" [routerLink]="['/register']" routerLinkActive="router-link-active" >
+          LOG IN / JOIN
+        </a>
+      </span>
+    </mat-toolbar-row>
+    <!---second row-->
+    <mat-toolbar-row class="d-none d-md-block text-center h-25">
+      <span #PLAKAT id= "plakat" class="option-shop mr-4 "
+      (mouseenter)="enterMenuHandler(PLAKAT.id)"
+      (mouseleave)="leaveMenuHandler()">
+        <a class="onNav" routerLinkActive="active-link" >PLAKAT</a>
+      </span>
+      <span #HALFMOON id= "halfmoon" class="option-shop mr-4 "
+       (mouseenter)="enterMenuHandler(HALFMOON.id)"
+       (mouseleave)="leaveMenuHandler()"><a
+          class="onNav"  routerLinkActive="active-link" >HALFMOON</a></span>
+      <span #CROWNTAIL id="crowntail" class="option-shop mr-4 "
+      (mouseenter)="enterMenuHandler(CROWNTAIL.id)"
+      (mouseleave)="leaveMenuHandler()"><a
+          class="onNav"  routerLinkActive="active-link" >CROWNTAIL</a></span>
+      <span #FIGHTER id="fighter" class="option-shop mr-4 "
+      (mouseenter)="enterMenuHandler(FIGHTER.id)"
+      (mouseleave)="leaveMenuHandler()"><a
+         class="onNav" routerLinkActive="active-link" >FIGHTER</a></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+  <div [ngClass]="menuClass" (mouseenter)="isMenuLook()" (mouseleave)="isdone()" id="menu-main">
+    <div class="col-2 d-flex flex-column mt-4 ml-2">
+      <a href="#" class="option-1 mt-3" >ALL FISH</a>
+      <a href="#" class="option-1 mt-1" >HOT PICKS</a>
+      <a href="#" class="option-1 mt-1" >NEW ARRIVALS</a>
+      <a href="#" class="option-1 mt-1" >SALES</a>
+    </div>
+    <div class="col-2 d-flex flex-column mt-4 ml-4" *ngIf="option!='fighter'">
+      <div><b>SHOP BY CATEGORY</b></div>
+      <mat-divider></mat-divider>
+      <div class="mt-1" #male id="male"><b>MALE</b></div>
+      <a class="ml-2" id="dragon" value="male" #mdragon>Dragon</a>
+      <a class="ml-2" id="fancy" #mfancy>Fancy</a>
+      <a class="ml-2" id="koi" #mkoi>Koi</a>
+      <a class="ml-2" id="super" #msuper>Super</a>
+      <div #female id="female"><b>FEMALE</b></div>
+      <a class="ml-2"  id="dragon" #fmdragon>Dragon</a>
+      <a class="ml-2"id="fancy" #fmfancy>Fancy</a>
+      <a class="ml-2" id="koi" #fmkoi>Koi</a>
+      <a class="ml-2"id="super" #fmsuper>Super</a>
+    </div>
+    <div class="col-2 d-flex flex-column mt-4 ml-4" *ngIf="option=='fighter'">
+        <div><b>SHOP BY GENDER</b></div>
+        <mat-divider></mat-divider>
+        <a class="ml-2 m-1"  id="FEMALE" #female>Female</a>
+        <a class="ml-2" id="MALE" #male>Male</a>
+    </div>
+    <div class="col-2 d-flex flex-column mt-4 ml-4">
+      <div class="mt-1"><b>SHOP BY SIZE</b></div>
+      <mat-divider></mat-divider>
+      <a class="mt-1"href="#">Baby</a>
+      <a href="#">Junior</a>
+      <a href="#">Senior</a>
+    </div>
+    <div class="col-6 my-auto text-center">
+      <img [src] ="optionImage" class=" w-50 mw-75">
+    </div>
+  </div>
+</div>

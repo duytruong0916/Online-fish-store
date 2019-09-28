@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="main-content">
+    <div class="row">
+      <div class="col col-md-3 col-6 text-center mt-3" *ngFor="let product of Products">
+        <img [src]="product.productImage" class="w-100">
+        <div><span>{{product.title}}</span><span class="ml-1">{{product.category}}</span></div>
+        <div>Size: {{product.size}}</div>
+        <div>Price: ${{product.price}}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,100 @@
+@media screen and (max-width: 768px) {
+  #container {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    font-size: 14px;
+    font-weight: normal;
+    color: black;
+  }
+  .button-form {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+  .form-group-1 {
+    width: 100%;
+  }
+  .form-group-2 {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    font-size: 12px;
+    font-weight: normal;
+    color: black;
+  }
+  .button-form {
+    width: 50%;
+  }
+  .container {
+    width: 70%;
+  }
+  form {
+    width: 80%;
+  }
+  .form-group-1 {
+    width: 50%;
+  }
+  .form-group-2 {
+    width: 30%;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 25px;
+}
+.controller {
+  font-size: 12px;
+  line-height: 40px;
+  width: 100%;
+  border: solid rgba(175, 171, 166, 0.979) 0.05px;
+  margin-top: 10px;
+
+}
+input:focus {
+  border: 1px solid #555;
+  outline: none;
+  text-indent: 10px;
+}
+.button-form {
+  padding: 10px 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 13px;
+}
+.button-form:hover {
+  background-color: grey;
+  color: black;
+}
+label {
+  font-weight: bold;
+}
+::placeholder {
+  text-indent: 10px;
+}
+
+input, select {
+  text-indent: 10px;
+}
+.my-invalid,
+.my-invalidpattern {
+  border: rgb(248, 115, 115) 0.05px solid;
+}
+flash-messages {
+  position: relative;
+}
+mat-error {
+  font-size: 15px;
+}
+select {
+  text-align: center;
+  display: block;
+  padding: 13px 1px;
+}

@@ -1,0 +1,53 @@
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown>.dropdown-toggle:active {
+  /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+.shop-name{
+  letter-spacing: 1.5px;
+  color: black;
+  font-weight: bolder;
+  font-size: 45px
+}
+a.option-1{
+  font-size: 12px;
+  color:black;
+  font-weight: 700;
+}
+.onNav{
+  text-decoration: none;
+  color:black;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+  transition: .2s ease-in;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  font-weight:bold;
+}
+a.onNav:hover{
+  border-bottom: 1.5px solid black;
+}
+.active-link{
+  border-bottom: 1.5px solid black;
+}
+a{
+  font-weight: 100;
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+   color: rgb(218, 153, 69);
+}
+a.gender{
+  font-size: 13px;
+  color: black;
+  font-weight: bold;
+  margin: 2px;
+}
+a:hover{
+  color:black;
+}
+.text-display{
+    display: flex;
+}
